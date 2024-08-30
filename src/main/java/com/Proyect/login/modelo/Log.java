@@ -3,12 +3,80 @@ package com.Proyect.login.modelo;
 import java.io.Serializable;
 import java.util.Date;
 
-public class Log implements Serializable {
+import org.hibernate.annotations.Cache;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "log")
+public class Log implements Serializable {
+    @Id
+    @Column(name = "id")
     private int id;
 
-    private Usuarios usuario;
+    private Usuario usuario;
     private String evento;
     private String descripcion;
     private Date fecha;
+
+    public Log() {
+    }
+
+    
+
+    public Log(int id, Usuario usuario, String evento, String descripcion, Date fecha) {
+        this.id = id;
+        this.usuario = usuario;
+        this.evento = evento;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+    }
+
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getEvento() {
+        return evento;
+    }
+
+    public void setEvento(String evento) {
+        this.evento = evento;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    
+    
 }
