@@ -1,22 +1,35 @@
 package com.Proyect.login.modelo;
 
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
 import java.util.Date;
 
-
+@Entity
+@Table(name="usuario")
 public class Usuario implements Serializable {
-
-
+    @Id
+    @Column(name = "id")
     private long id;
 
+    @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "password")
     private String password;
+
+    @Column(name = "fecha")
     private Date fecha;
+
+    @Column(name = "ultimoLogin")
     private Date ultimoLogin;
 
     public Usuario() {

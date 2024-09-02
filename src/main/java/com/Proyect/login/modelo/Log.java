@@ -17,9 +17,16 @@ public class Log implements Serializable {
     @Column(name = "id")
     private int id;
 
+    @Column(name = "usuario")
     private Usuario usuario;
+
+    @Column(name = "evento")
     private String evento;
+
+    @Column(name = "descripcion")
     private String descripcion;
+
+    @Column(name = "fecha")
     private Date fecha;
 
     public Log() {

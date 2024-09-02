@@ -1,13 +1,28 @@
 package com.Proyect.login.modelo;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.io.Serializable;
 
-public class Roles implements Serializable {
 
+@Entity
+@Table(name="roles")
+public class Roles implements Serializable {
+    @Id
+    @Column(name="id")
     private int id;
 
+    @Column(name = "nombre")
     private String nombre;
+
+    @Column(name = "descripcion")
     private String descripcion;
+
+
+
 
     public Roles() {
     }
