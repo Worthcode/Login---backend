@@ -5,14 +5,14 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.3</version>
+		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.Proyect</groupId>
-	<artifactId>login</artifactId>
+	<groupId>com.gestion</groupId>
+	<artifactId>proyectos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>login</name>
-	<description>login</description>
+	<name>proyectos</name>
+	<description>Gestion de proyectos project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -39,13 +39,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
